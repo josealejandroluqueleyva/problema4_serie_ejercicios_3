@@ -1,0 +1,48 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package guia2_problema4_grupal;
+
+import java.util.Scanner;
+
+/**
+ *
+ *
+ */
+public class Guia2_Problema4_Grupal {
+
+    public static void main(String[] args) {
+        int numero = 0;
+        int suma1 = 0;
+        int suma2 = 0;
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.printf("Porfavor Introduzca la cantidad de números enteros que desea calcular: ");
+        ;
+        int cantidad = teclado.nextInt();
+
+        for (int valor = 0; valor < cantidad; valor++) {
+            System.out.println("Introduzca el valor " + (valor + 1));
+            numero = teclado.nextInt();
+
+            if (numero % 2 == 0) {
+                System.out.println("Es par");
+                String tipo = "par";
+                if ("par".equals(tipo)) {
+                    suma1 += numero;
+                }
+            } else if (numero % 2 != 0) {
+                System.out.println("Es impar ");
+                String tipo = "impar";
+                if ("impar".equals(tipo)) {
+                    suma2 += numero;
+                }
+            }
+
+        }
+        System.out.println("La suma de los pares es: " + suma1);
+        System.out.println("La suma de los impares es: " + suma2);
+    }
+}
